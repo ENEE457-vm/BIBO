@@ -1,0 +1,333 @@
+** Test 1 **
+- The output of your program is as follows
+Number of args passed: 9
+----Command line args passed----
+argv[0]: gradebookdisplay
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -PA
+argv[6]: -A
+argv[7]: -AN
+argv[8]: Midterm
+(Mason, Ted, 90)
+(Smith, John, 95)
+(Tyler, Russell, 80)
+- The expected output is as follows
+(Mason, Ted, 90)
+(Smith, John, 95)
+(Tyler, Russell, 80)
+
+** Test 2 **
+- The output of your program is as follows
+Number of args passed: 9
+----Command line args passed----
+argv[0]: gradebookdisplay
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -PA
+argv[6]: -G
+argv[7]: -AN
+argv[8]: Final
+(Tyler, Russell, 190)
+(Smith, John, 180)
+(Mason, Ted, 150)
+- The expected output is as follows
+(Tyler, Russell, 190)
+(Smith, John, 180)
+(Mason, Ted, 150)
+
+** Test 3 **
+- The output of your program is as follows
+Number of args passed: 10
+----Command line args passed----
+argv[0]: gradebookdisplay
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -PS
+argv[6]: -FN
+argv[7]: John
+argv[8]: -LN
+argv[9]: Smith
+(Midterm, 95)
+(Final, 180)
+(Project, 48)
+- The expected output is as follows
+(Midterm, 95)
+(Final, 180)
+(Project, 48)
+
+** Test 4 **
+- The output of your program is as follows
+Number of args passed: 7
+----Command line args passed----
+argv[0]: gradebookdisplay
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -PF
+argv[6]: -G
+(Smith, John, 0.927500)
+(Tyler, Russell, 0.920000)
+(Mason, Ted, 0.850000)
+- The expected output is as follows
+(Smith, John, 0.9275)
+(Tyler, Russell, 0.92)
+(Mason, Ted, 0.85)
+
+** Test 5 **
+- The output of your program is as follows
+Number of args passed: 7
+----Command line args passed----
+argv[0]: gradebookdisplay
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -PF
+argv[6]: -A
+(Mason, Ted, 0.600000)
+(Smith, John, 0.687500)
+(Tyler, Russell, 0.675000)
+- The expected output is as follows
+(Mason, Ted, 0.6)
+(Smith, John, 0.6875)
+(Tyler, Russell, 0.675)
+
+Number of args passed: 12
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -P
+argv[7]: 50
+argv[8]: -W
+argv[9]: 0.125
+argv[10]: -AN
+argv[11]: Project
+** Test 6 **
+- The output of your program is as follows
+Number of args passed: 12
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: 45ea448f
+argv[5]: -AA
+argv[6]: -P
+argv[7]: 50
+argv[8]: -W
+argv[9]: 0.125
+argv[10]: -AN
+argv[11]: Project
+Invalid argument lengths for inputs 0-5
+invalid
+- The expected output is as follows
+invalid
+--> This is an invalid command, because key is wrong.
+
+** Test 7 **
+- The output of your program is as follows
+Number of args passed: 12
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -P
+argv[7]: 50
+argv[8]: -W
+argv[9]: 0.125
+argv[10]: -AN
+argv[11]: Project
+Assignment already exists
+invalid
+- The expected output is as follows
+--> This is a valid setting, because ordering can be different.
+
+** Test 8 **
+- The output of your program is as follows
+Number of args passed: 14
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -AN
+argv[7]: Project_X
+argv[8]: -AN
+argv[9]: Projec_Y
+argv[10]: -P
+argv[11]: 50
+argv[12]: -W
+argv[13]: 0.125
+Invalid assignment name argument
+invalid
+- The expected output is as follows
+--> This is a valid setting, because there can be multiple setting and the last one should be taken.
+
+** Test 9 **
+- The output of your program is as follows
+Number of args passed: 10
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -P
+argv[7]: 50
+argv[8]: -W
+argv[9]: 0.25
+Total weight will exceed 1
+invalid
+- The expected output is as follows
+invalid
+--> This is an invalid setting, because the assigment name is not given.
+
+** Test 10 **
+- The output of your program is as follows
+Number of args passed: 17
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -AN
+argv[7]: BiggerProject
+argv[8]: -AS
+argv[9]: -FN
+argv[10]: Smithson
+argv[11]: -LN
+argv[12]: Kyla
+argv[13]: -P
+argv[14]: 50
+argv[15]: -W
+argv[16]: 0.25
+Invalid flag lengths for inputs 6+
+invalid
+- The expected output is as follows
+invalid
+--> This is an invalid setting, because commands are conflicting.
+
+** Test 11 **
+- The output of your program is as follows
+Number of args passed: 10
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AS
+argv[6]: -FN
+argv[7]: John
+argv[8]: -LN
+argv[9]: Smith
+Student already exists
+invalid
+- The expected output is as follows
+invalid
+--> This is a invalid setting, because a student with the same name exists.
+
+** Test 12 **
+- The output of your program is as follows
+Number of args passed: 12
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -P
+argv[7]: 50
+argv[8]: -W
+argv[9]: 0.125
+argv[10]: -AN
+argv[11]: Project
+Assignment already exists
+invalid
+- The expected output is as follows
+invalid
+--> This is a invalid setting, because an assigment with the same name exists.
+
+** Test 13 **
+- The output of your program is as follows
+Number of args passed: 10
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AS
+argv[6]: -FN
+argv[7]: John2
+argv[8]: -LN
+argv[9]: Smith
+Invalid first name argument
+invalid
+- The expected output is as follows
+invalid
+--> This is an invalid setting, because name of students can only be alphabetic characters.
+
+** Test 14 **
+- The output of your program is as follows
+Number of args passed: 12
+----Command line args passed----
+argv[0]: gradebookadd
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -AA
+argv[6]: -AN
+argv[7]: Midterm?
+argv[8]: -P
+argv[9]: 100
+argv[10]: -W
+argv[11]: 0.25
+Invalid assignment name argument
+invalid
+- The expected output is as follows
+invalid
+--> This is an invalid setting, because name of assignments can only be alphabetic characters and numbers.
+
+** Test 15 **
+- The output of your program is as follows
+Number of args passed: 10
+----Command line args passed----
+argv[0]: gradebookdisplay
+argv[1]: -N
+argv[2]: mygradebook
+argv[3]: -K
+argv[4]: CB75F7FE54F76856A7EB4E05B2F373AB
+argv[5]: -PS
+argv[6]: -FN
+argv[7]: John
+argv[8]: -LN
+argv[9]: Tyler
+Student doesn't exist
+invalid
+- The expected output is as follows
+invalid
+--> This is an invalid setting, because this student does not exist.
+
